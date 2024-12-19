@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neckooleri Bookshelf - Neckooleri</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper" >
+
+        <header class="head">
+            <h1>Neckooleri Bookshelf</h1>
+        </header>
+
+        <main>
+
+            <!-- Form -->
+            <div class="bookForm">
+                <section class="section">
+                    <h2 class="title">Masukkan Judul Buku</h2>
+                    <form id="inputBook" class="form-container">
+                        <div class="input">
+                            <label for="inputBookTitle">Judul Buku</label>
+                            <input id="inputBookTitle" type="text" required>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookAuthor">Penulis Buku</label>
+                            <input id="inputBookAuthor" type="text" required>
+                        </div>
+                        <div class="input">
+                            <label for="inputPublisher">Penerbit</label>
+                            <input id="inputPublisher" type="text"required>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookYear">Tahun Terbit Buku</label>
+                            <input id="inputBookYear" type="number"required>
+                        </div>
+                        <div class="input_inline">
+                            <input id="inputBookIsComplete" type="checkbox">
+                            <label for="inputBookIsComplete">Buku selesai dibaca</label>
+                        </div>
+                        <div>
+                            <button id="bookSubmit" type="submit" class="btn-form">Simpan</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            
+            <!-- Search -->
+            <div class="search-container">
+                <section class="section">
+                    <h2 class="title">Cari Buku</h2>
+                    <form id="searchBook">
+                        <label for="searchBookTitle">Judul</label>
+                        <input id="searchBookTitle" type="text">
+                        <button id="searchSubmit" type="submit" class="btn-form">Cari</button>
+                    </form>
+                </section>
+            </div>
+
+            <!-- unread -->
+            <div class="section">
+                <section class="book_shelf">
+                    <h2 class="title">Belum selesai dibaca</h2>
+                    <div id="incompleteBookshelfList" class="book_list">
+                    </div>
+                </section>
+            </div>
+
+            <!-- read -->
+            <div class="section">
+                <section class="book_shelf">
+                    <h2 class="title">Selesai dibaca</h2>
+                    <div id="completeBookshelfList" class="book_list">
+                    </div>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
